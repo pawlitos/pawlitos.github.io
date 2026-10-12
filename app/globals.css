@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400&family=Manrope:wght@400;500;600&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Manrope", sans-serif;
+  --font-mono: "DM Mono", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #f7f8f5;
+  font-family: "Manrope", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: #315f4b;
+  color: white;
+}
+
+.nav-link {
+  position: relative;
+  padding-block: 0.25rem;
+}
+
+.nav-link::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  content: "";
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 250ms ease;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.section-label {
+  font-family: "DM Mono", monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  color: #718078;
+  text-transform: uppercase;
+}
+
+.button-primary,
+.button-light {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.8rem 1.15rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 999px;
+  transition:
+    color 200ms ease,
+    background 200ms ease;
+}
+
+.button-primary {
+  color: white;
+  background: #17221d;
+}
+
+.button-primary:hover {
+  background: #315f4b;
+}
+
+.button-light {
+  color: #17221d;
+  background: #eef2ef;
+}
+
+.button-light:hover {
+  background: #cfe1d7;
+}
+
+.skill-tag {
+  padding: 0.4rem 0.7rem;
+  font-family: "DM Mono", monospace;
+  font-size: 0.65rem;
+  color: #516159;
+  background: white;
+  border: 1px solid #d8ddd9;
+  border-radius: 999px;
+}
+
+.project-link {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  gap: 0.75rem;
+  padding-bottom: 0.3rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-bottom: 1px solid #aeb8b1;
+}
+
+.preview-window {
+  height: 22rem;
+  overflow: hidden;
+  background: #f2f4f1;
+  border: 1px solid #d8ddd9;
+  border-radius: 0.8rem;
+  box-shadow: 0 1.5rem 4rem rgb(41 57 48 / 8%);
+}
+
+.preview-topbar {
+  display: flex;
+  height: 2.25rem;
+  align-items: center;
+  gap: 0.35rem;
+  padding-inline: 0.8rem;
+  background: white;
+  border-bottom: 1px solid #e5e8e5;
+}
+
+.preview-topbar span {
+  width: 0.4rem;
+  height: 0.4rem;
+  background: #d2d8d3;
+  border-radius: 999px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-family: "DM Mono", monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  color: rgb(255 255 255 / 50%);
+  text-transform: uppercase;
+}
+
+.form-field {
+  display: block;
+  width: 100%;
+  padding-block: 0.8rem;
+  color: white;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid rgb(255 255 255 / 20%);
+  border-radius: 0;
+  outline: none;
+  transition: border-color 200ms ease;
+}
+
+.form-field::placeholder {
+  color: rgb(255 255 255 / 32%);
+}
+
+.form-field:focus {
+  border-color: rgb(255 255 255 / 70%);
+}
+
+@media (max-width: 640px) {
+  .preview-window {
+    height: 18rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
