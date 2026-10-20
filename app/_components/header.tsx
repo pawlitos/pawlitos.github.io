@@ -5,19 +5,28 @@ export default function Header() {
         <a href="#top" className="font-extrabold tracking-tight">
           pawlitos<span className="text-primary">.github.io</span>
         </a>
-        <ul className="hidden gap-7 text-[0.95rem] font-medium text-muted md:flex">
+        <ul className="-mr-3 hidden gap-1 text-[0.95rem] font-medium text-muted md:flex">
           <li>
-            <a href="#o-mnie" className="hover:text-primary">
+            <a
+              href="#o-mnie"
+              className="rounded-md px-3 py-1.5 transition-colors hover:bg-primary/10 hover:text-primary"
+            >
               O mnie
             </a>
           </li>
           <li>
-            <a href="#projekty" className="hover:text-primary">
+            <a
+              href="#projekty"
+              className="rounded-md px-3 py-1.5 transition-colors hover:bg-primary/10 hover:text-primary"
+            >
               Projekty
             </a>
           </li>
           <li>
-            <a href="#kontakt" className="hover:text-primary">
+            <a
+              href="#kontakt"
+              className="rounded-md px-3 py-1.5 transition-colors hover:bg-primary/10 hover:text-primary"
+            >
               Kontakt
             </a>
           </li>
