@@ -1,158 +1,252 @@
-//import Image from "next/image";
-import Arrow from "./_components/arrow";
 import ContactForm from "./_components/contact-form";
-import ProjectPreview from "./_components/project-preview";
-import { projects } from "./_constants/projects";
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-[#f7f8f5] text-[#17221d]">
-      <header className="mx-auto flex max-w-7xl items-center justify-between px-5 py-6 sm:px-8 lg:px-10">
-        <a className="font-semibold tracking-[-0.03em]" href="#top">
-          pawel.dev
-        </a>
-        <nav className="flex items-center gap-5 text-xs font-medium sm:gap-8 sm:text-sm">
-          <a className="nav-link" href="#o-mnie">
-            O mnie
+    <div>
+      <header className="sticky top-[env(safe-area-inset-top,0px)] z-10 border-b border-line bg-white/70 backdrop-blur-lg backdrop-saturate-150">
+        <nav className="mx-auto flex h-16 max-w-5xl items-center justify-between px-6">
+          <a href="#top" className="font-extrabold tracking-tight">
+            pawel<span className="text-primary">.dev</span>
           </a>
-          <a className="nav-link" href="#projekty">
-            Projekty
-          </a>
-          <a className="nav-link" href="#kontakt">
-            Kontakt
-          </a>
+          <ul className="hidden gap-7 text-[0.95rem] font-medium text-muted md:flex">
+            <li>
+              <a href="#o-mnie" className="hover:text-primary">
+                O mnie
+              </a>
+            </li>
+            <li>
+              <a href="#projekty" className="hover:text-primary">
+                Projekty
+              </a>
+            </li>
+            <li>
+              <a href="#kontakt" className="hover:text-primary">
+                Kontakt
+              </a>
+            </li>
+          </ul>
         </nav>
       </header>
 
       <main id="top">
-        <section className="mx-auto grid min-h-[calc(100svh-76px)] max-w-7xl content-center gap-16 px-5 py-20 sm:px-8 lg:grid-cols-12 lg:px-10">
-          <div className="lg:col-span-9">
-            <h1 className="max-w-5xl text-[clamp(3.5rem,9vw,7.5rem)] font-medium leading-[0.92] tracking-[-0.065em]">
-              Buduję dopracowane
-              <span className="text-[#668173]"> interfejsy.</span>
-            </h1>
-          </div>
-          <div className="flex flex-col justify-end gap-8 lg:col-span-3">
-            <p className="text-base leading-relaxed text-[#5f6e66]">
-              Frontend developer skupiony na React, TypeScript i jakości
-              doświadczeń użytkownika.
-            </p>
-            <a className="button-primary group" href="#projekty">
+        <div className="mx-auto max-w-5xl px-6 py-16 md:py-24">
+          <span className="mb-6 inline-block rounded-full bg-primary/10 px-3.5 py-1.5 text-sm font-semibold text-primary">
+            Dostępny do nowych projektów
+          </span>
+          <h1 className="mb-5 max-w-[16ch] text-[clamp(2.4rem,6vw,4.2rem)] leading-[1.08] font-extrabold tracking-tighter">
+            Tworzę <em className="not-italic text-primary">interfejsy</em>,
+            które działają i dobrze wyglądają.
+          </h1>
+          <p className="mb-9 max-w-[56ch] text-xl text-muted">
+            Software developer z pasją do czystego kodu, wydajnych aplikacji
+            webowych i przemyślanych interfejsów. Zamieniam pomysły w produkty
+            gotowe na produkcję.
+          </p>
+          <div className="flex flex-wrap gap-3">
+            <a
+              href="#projekty"
+              className="rounded-[10px] border-[1.5px] border-primary bg-primary px-5.5 py-3 text-[0.95rem] font-semibold text-white transition hover:border-primary-dark hover:bg-primary-dark"
+            >
               Zobacz projekty
-              <Arrow className="size-4 transition-transform group-hover:translate-x-1" />
+            </a>
+            <a
+              href="#kontakt"
+              className="rounded-[10px] border-[1.5px] border-primary px-5.5 py-3 text-[0.95rem] font-semibold text-primary transition hover:bg-primary/10"
+            >
+              Skontaktuj się
             </a>
           </div>
-          <div className="border-t border-[#d8ddd9] pt-5 lg:col-span-12">
-            <div className="flex flex-wrap gap-x-8 gap-y-3 text-xs text-[#718078]">
-              <span>React / Next.js</span>
-              <span>TypeScript</span>
-              <span>Design systems</span>
-              <span>Accessibility</span>
-            </div>
-          </div>
-        </section>
+        </div>
 
-        <section className="border-y border-[#d8ddd9] bg-white" id="o-mnie">
-          <div className="mx-auto grid max-w-7xl gap-12 px-5 py-24 sm:px-8 sm:py-32 lg:grid-cols-12 lg:px-10">
-            <p className="section-label lg:col-span-3">O mnie</p>
-            <div className="lg:col-span-8">
-              <h2 className="max-w-4xl text-4xl font-medium leading-[1.08] tracking-[-0.045em] sm:text-6xl">
-                Łączę czysty kod z uważnością na detale produktu.
-              </h2>
-              <div className="mt-12 grid gap-10 border-t border-[#d8ddd9] pt-8 sm:grid-cols-2">
-                <p className="text-lg leading-relaxed text-[#34473e]">
-                  Projektuję i implementuję szybkie, dostępne aplikacje
-                  internetowe. Dobrze czuję się zarówno przy budowaniu produktu
-                  od zera, jak i rozwijaniu istniejącego systemu.
+        <section id="o-mnie" className="bg-surface py-14 md:py-20">
+          <div className="mx-auto max-w-5xl px-6">
+            <h2 className="mb-3 text-[clamp(1.8rem,4vw,2.4rem)] font-bold tracking-tight after:mt-3 after:block after:h-1 after:w-12 after:rounded-sm after:bg-primary">
+              O mnie
+            </h2>
+            <p className="mb-10 max-w-[60ch] text-muted">
+              Krótko o tym, czym się zajmuję i jak pracuję.
+            </p>
+            <div className="grid items-start gap-12 md:grid-cols-[1.4fr_1fr]">
+              <div className="space-y-4 text-muted">
+                <p>
+                  Od kilku lat projektuję i rozwijam aplikacje webowe — od
+                  prostych stron po rozbudowane systemy. Lubię rozumieć,
+                  dlaczego coś działa, a nie tylko jak to uruchomić, dlatego
+                  stawiam na rozwiązania proporcjonalne do problemu.
                 </p>
-                <div className="space-y-6 text-sm leading-relaxed text-[#718078]">
-                  <p>
-                    Lubię proste rozwiązania, przewidywalne API i komponenty,
-                    które łatwo utrzymać. Współpracuję blisko z designerami i
-                    zespołami produktowymi.
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    {[
-                      "React",
-                      "TypeScript",
-                      "Next.js",
-                      "Tailwind CSS",
-                      "Git",
-                    ].map((item) => (
-                      <span className="skill-tag" key={item}>
-                        {item}
-                      </span>
-                    ))}
-                  </div>
+                <p>
+                  Poza pracą eksperymentuję z nowymi technologiami, buduję
+                  narzędzia CLI i dzielę się wiedzą z innymi programistami.
+                </p>
+                <div className="flex flex-wrap gap-2 pt-2 text-ink">
+                  <span className="rounded-full border border-line bg-white px-3.5 py-1.5 text-sm font-medium">
+                    TypeScript
+                  </span>
+                  <span className="rounded-full border border-line bg-white px-3.5 py-1.5 text-sm font-medium">
+                    React
+                  </span>
+                  <span className="rounded-full border border-line bg-white px-3.5 py-1.5 text-sm font-medium">
+                    Next.js
+                  </span>
+                  <span className="rounded-full border border-line bg-white px-3.5 py-1.5 text-sm font-medium">
+                    Node.js
+                  </span>
+                  <span className="rounded-full border border-line bg-white px-3.5 py-1.5 text-sm font-medium">
+                    PostgreSQL
+                  </span>
+                  <span className="rounded-full border border-line bg-white px-3.5 py-1.5 text-sm font-medium">
+                    Docker
+                  </span>
+                  <span className="rounded-full border border-line bg-white px-3.5 py-1.5 text-sm font-medium">
+                    Git
+                  </span>
+                </div>
+              </div>
+              <div className="grid gap-4">
+                <div className="rounded-2xl border border-line bg-white px-6 py-5">
+                  <b className="block text-3xl tracking-tight text-primary">
+                    5+
+                  </b>
+                  <span className="text-[0.92rem] text-muted">
+                    lat doświadczenia
+                  </span>
+                </div>
+                <div className="rounded-2xl border border-line bg-white px-6 py-5">
+                  <b className="block text-3xl tracking-tight text-primary">
+                    30+
+                  </b>
+                  <span className="text-[0.92rem] text-muted">
+                    zrealizowanych projektów
+                  </span>
+                </div>
+                <div className="rounded-2xl border border-line bg-white px-6 py-5">
+                  <b className="block text-3xl tracking-tight text-primary">
+                    100%
+                  </b>
+                  <span className="text-[0.92rem] text-muted">
+                    zaangażowania
+                  </span>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        <section
-          className="mx-auto max-w-7xl px-5 py-24 sm:px-8 sm:py-32 lg:px-10"
-          id="projekty"
-        >
-          <div className="mb-14 grid gap-6 lg:grid-cols-12">
-            <p className="section-label lg:col-span-3">Wybrane projekty</p>
-            <h2 className="text-4xl font-medium tracking-[-0.045em] sm:text-6xl lg:col-span-8">
-              Kilka rzeczy, które zbudowałem.
+        <section id="projekty" className="py-14 md:py-20">
+          <div className="mx-auto max-w-5xl px-6">
+            <h2 className="mb-3 text-[clamp(1.8rem,4vw,2.4rem)] font-bold tracking-tight after:mt-3 after:block after:h-1 after:w-12 after:rounded-sm after:bg-primary">
+              Projekty
             </h2>
-          </div>
-          <div className="divide-y divide-[#d8ddd9] border-y border-[#d8ddd9]">
-            {projects.map((project) => (
-              <article
-                className="grid gap-8 py-12 lg:grid-cols-12 lg:items-center lg:py-16"
-                key={project.title}
-              >
-                <div className="lg:col-span-5">
-                  <span className="mb-8 block font-mono text-xs text-[#849088]">
-                    {project.number}
+            <p className="mb-10 max-w-[60ch] text-muted">
+              Wybrane prace, z których jestem najbardziej zadowolony.
+            </p>
+            <div className="grid grid-cols-[repeat(auto-fit,minmax(min(280px,100%),1fr))] gap-6">
+              <article className="flex flex-col rounded-2xl border border-line bg-white p-7 transition hover:-translate-y-1 hover:border-primary hover:shadow-xl hover:shadow-primary/15">
+                <h3 className="mb-2 text-xl font-semibold tracking-tight">
+                  Panel analityczny
+                </h3>
+                <p className="mb-5 flex-1 text-muted">
+                  Dashboard do wizualizacji danych w czasie rzeczywistym z
+                  filtrowaniem i eksportem raportów.
+                </p>
+                <div className="mb-4 flex flex-wrap gap-1.5 text-xs font-semibold text-primary">
+                  <span className="rounded-md bg-primary/10 px-2.5 py-0.5">
+                    React
                   </span>
-                  <h3 className="text-3xl font-medium tracking-[-0.04em] sm:text-4xl">
-                    {project.title}
-                  </h3>
-                  <p className="mt-5 max-w-md leading-relaxed text-[#718078]">
-                    {project.description}
-                  </p>
-                  <div className="mt-7 flex flex-wrap gap-2">
-                    {project.stack.map((item) => (
-                      <span className="skill-tag" key={item}>
-                        {item}
-                      </span>
-                    ))}
-                  </div>
-                  <a className="project-link group mt-8" href="#kontakt">
-                    Zobacz case study
-                    <Arrow className="size-4 transition-transform group-hover:translate-x-1" />
-                  </a>
+                  <span className="rounded-md bg-primary/10 px-2.5 py-0.5">
+                    TypeScript
+                  </span>
+                  <span className="rounded-md bg-primary/10 px-2.5 py-0.5">
+                    D3
+                  </span>
                 </div>
-                <div className="lg:col-span-7">
-                  <ProjectPreview type={project.type} />
-                </div>
+                <a
+                  href="#"
+                  className="font-semibold text-primary hover:underline"
+                >
+                  Zobacz projekt →
+                </a>
               </article>
-            ))}
+              <article className="flex flex-col rounded-2xl border border-line bg-white p-7 transition hover:-translate-y-1 hover:border-primary hover:shadow-xl hover:shadow-primary/15">
+                <h3 className="mb-2 text-xl font-semibold tracking-tight">
+                  API do zarządzania zadaniami
+                </h3>
+                <p className="mb-5 flex-1 text-muted">
+                  Skalowalne REST API z uwierzytelnianiem, kolejkami zadań i
+                  pełną dokumentacją OpenAPI.
+                </p>
+                <div className="mb-4 flex flex-wrap gap-1.5 text-xs font-semibold text-primary">
+                  <span className="rounded-md bg-primary/10 px-2.5 py-0.5">
+                    Node.js
+                  </span>
+                  <span className="rounded-md bg-primary/10 px-2.5 py-0.5">
+                    PostgreSQL
+                  </span>
+                  <span className="rounded-md bg-primary/10 px-2.5 py-0.5">
+                    Docker
+                  </span>
+                </div>
+                <a
+                  href="#"
+                  className="font-semibold text-primary hover:underline"
+                >
+                  Zobacz projekt →
+                </a>
+              </article>
+              <article className="flex flex-col rounded-2xl border border-line bg-white p-7 transition hover:-translate-y-1 hover:border-primary hover:shadow-xl hover:shadow-primary/15">
+                <h3 className="mb-2 text-xl font-semibold tracking-tight">
+                  Narzędzie CLI
+                </h3>
+                <p className="mb-5 flex-1 text-muted">
+                  Aplikacja terminalowa automatyzująca codzienne zadania
+                  programistów, rozwijana jako open source.
+                </p>
+                <div className="mb-4 flex flex-wrap gap-1.5 text-xs font-semibold text-primary">
+                  <span className="rounded-md bg-primary/10 px-2.5 py-0.5">
+                    Rust
+                  </span>
+                  <span className="rounded-md bg-primary/10 px-2.5 py-0.5">
+                    CLI
+                  </span>
+                  <span className="rounded-md bg-primary/10 px-2.5 py-0.5">
+                    Open source
+                  </span>
+                </div>
+                <a
+                  href="#"
+                  className="font-semibold text-primary hover:underline"
+                >
+                  Zobacz projekt →
+                </a>
+              </article>
+            </div>
           </div>
         </section>
 
-        <section className="bg-[#17221d] text-[#eef2ef]" id="kontakt">
-          <div className="mx-auto grid max-w-7xl gap-16 px-5 py-24 sm:px-8 sm:py-32 lg:grid-cols-12 lg:px-10">
-            <div className="lg:col-span-5">
-              <p className="section-label mb-8 text-white/45">Kontakt</p>
-              <h2 className="text-5xl font-medium leading-[0.98] tracking-[-0.05em] sm:text-7xl">
+        <section id="kontakt" className="bg-primary py-16 text-white md:py-24">
+          <div className="mx-auto grid max-w-5xl gap-12 px-6 md:grid-cols-2 md:gap-20">
+            <div>
+              <h2 className="mb-8 text-[clamp(2.4rem,5.5vw,4rem)] leading-[1.02] font-normal tracking-tighter">
                 Porozmawiajmy o współpracy.
               </h2>
-              <p className="mt-8 max-w-sm leading-relaxed text-white/55">
+              <p className="max-w-[40ch] text-lg text-white/70">
                 Szukasz frontend developera do zespołu lub konkretnego produktu?
                 Napisz — chętnie poznam szczegóły.
               </p>
-              {/* <a
-                className="mt-8 inline-block border-b border-white/30 pb-1"
-                href="mailto:hello@pawel.dev"
-              >
-                hello@pawel.dev
-              </a> */}
+              <div className="mt-8 flex gap-6 font-medium text-white">
+                <a
+                  href="#"
+                  className="underline decoration-white/40 underline-offset-4 hover:decoration-white"
+                >
+                  GitHub
+                </a>
+                <a
+                  href="#"
+                  className="underline decoration-white/40 underline-offset-4 hover:decoration-white"
+                >
+                  LinkedIn
+                </a>
+              </div>
             </div>
 
             <ContactForm />
@@ -160,17 +254,9 @@ export default function App() {
         </section>
       </main>
 
-      <footer className="border-t border-white/10 bg-[#17221d] px-5 py-7 text-white/40 sm:px-8 lg:px-10">
-        <div className="mx-auto flex max-w-7xl flex-col gap-4 text-xs sm:flex-row sm:items-center sm:justify-between">
+      <footer className="border-t border-white/10 bg-primary pt-8 pb-[calc(2rem+env(safe-area-inset-bottom,0px))] text-sm text-white/70">
+        <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-4 px-6">
           <p>© 2026 Paweł Staś. Frontend Developer.</p>
-          <div className="flex gap-6">
-            <a className="transition hover:text-white" href="#top">
-              GitHub
-            </a>
-            <a className="transition hover:text-white" href="#top">
-              LinkedIn
-            </a>
-          </div>
         </div>
       </footer>
     </div>

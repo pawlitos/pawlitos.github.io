@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { DM_Mono, Inter } from "next/font/google";
 import "./globals.css";
 
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin", "latin-ext"],
+});
 
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
+const dmMono = DM_Mono({
+  variable: "--font-dm-mono",
+  weight: "400",
+  subsets: ["latin", "latin-ext"],
+});
 
 export const metadata: Metadata = {
   title: "Paweł Staś — Frontend Developer",
@@ -20,11 +21,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html
-      lang="pl"
-      //className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body>{children}</body>
+    <html lang="pl" className={`${inter.variable} ${dmMono.variable}`}>
+      <body className="bg-white font-sans text-ink leading-relaxed antialiased pt-[env(safe-area-inset-top,0px)]">
+        {children}
+      </body>
     </html>
   );
 }
