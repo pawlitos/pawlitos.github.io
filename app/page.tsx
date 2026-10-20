@@ -212,13 +212,17 @@ export default function App() {
               </p>
               <div className="mt-8 flex gap-6 font-medium text-white">
                 <a
-                  href="#"
+                  href="https://github.com/pawlitos"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="underline decoration-white/40 underline-offset-4 hover:decoration-white"
                 >
                   GitHub
                 </a>
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/in/pawel-stas/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="underline decoration-white/40 underline-offset-4 hover:decoration-white"
                 >
                   LinkedIn
