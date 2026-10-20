@@ -1,32 +1,9 @@
-import ContactForm from "./_components/contact-form";
+import { ContactForm, Footer, Header } from "./_components";
 
 export default function App() {
   return (
     <div>
-      <header className="sticky top-[env(safe-area-inset-top,0px)] z-10 border-b border-line bg-white/70 backdrop-blur-lg backdrop-saturate-150">
-        <nav className="mx-auto flex h-16 max-w-5xl items-center justify-between px-6">
-          <a href="#top" className="font-extrabold tracking-tight">
-            pawlitos<span className="text-primary">.github.io</span>
-          </a>
-          <ul className="hidden gap-7 text-[0.95rem] font-medium text-muted md:flex">
-            <li>
-              <a href="#o-mnie" className="hover:text-primary">
-                O mnie
-              </a>
-            </li>
-            <li>
-              <a href="#projekty" className="hover:text-primary">
-                Projekty
-              </a>
-            </li>
-            <li>
-              <a href="#kontakt" className="hover:text-primary">
-                Kontakt
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </header>
+      <Header />
 
       <main id="top">
         <div className="mx-auto max-w-5xl px-6 py-16 md:py-24">
@@ -45,7 +22,7 @@ export default function App() {
           <div className="flex flex-wrap gap-3">
             <a
               href="#projekty"
-              className="rounded-[10px] border-[1.5px] border-primary bg-primary px-5.5 py-3 text-[0.95rem] font-semibold text-white transition hover:border-primary-dark hover:bg-primary-dark"
+              className="rounded-[10px] border-[1.5px] border-primary bg-primary px-5.5 py-3 text-[0.95rem] font-semibold text-white transition hover:border-primary-hover hover:bg-primary-hover"
             >
               Zobacz projekty
             </a>
@@ -254,11 +231,7 @@ export default function App() {
         </section>
       </main>
 
-      <footer className="border-t border-white/10 bg-primary pt-8 pb-[calc(2rem+env(safe-area-inset-bottom,0px))] text-sm text-white/70">
-        <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-4 px-6">
-          <p>© 2026 Paweł Staś. Frontend Developer.</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

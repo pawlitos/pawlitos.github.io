@@ -4,8 +4,8 @@
   --font-sans: var(--font-inter), system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   --font-mono: var(--font-dm-mono), ui-monospace, monospace;
   --color-primary: var(--color-fuchsia-900);
-  --color-primary-dark: color-mix(in srgb, var(--color-primary) 85%, black);
-  --color-surface: #f7f5fb;
+  --color-primary-hover: color-mix(in srgb, var(--color-primary) 85%, black);
+  --color-surface: var(--color-purple-50);
   --color-line: #e6e1ee;
   --color-muted: #5f5a6b;
   --color-ink: #18141f;
@@ -19,5 +19,5 @@
 
 ::selection {
   background: var(--color-primary);
-  color: white;
+  color: var(--color-white);
 }
