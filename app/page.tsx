@@ -6,34 +6,38 @@ export default function App() {
       <Header />
 
       <main id="top">
-        <div className="mx-auto max-w-5xl px-6 py-16 md:py-24">
-          <span className="mb-6 inline-block rounded-full bg-primary/10 px-3.5 py-1.5 text-sm font-semibold text-primary">
-            Dostępny do nowych projektów
-          </span>
-          <h1 className="mb-5 max-w-[16ch] text-[clamp(2.4rem,6vw,4.2rem)] leading-[1.08] font-extrabold tracking-tighter">
-            Tworzę <em className="not-italic text-primary">interfejsy</em>,
-            które działają i dobrze wyglądają.
-          </h1>
-          <p className="mb-9 max-w-[56ch] text-xl text-muted">
-            Software developer z pasją do czystego kodu, wydajnych aplikacji
-            webowych i przemyślanych interfejsów. Zamieniam pomysły w produkty
-            gotowe na produkcję.
-          </p>
-          <div className="flex flex-wrap gap-3">
-            <a
-              href="#projekty"
-              className="rounded-[10px] border-[1.5px] border-primary bg-primary px-5.5 py-3 text-[0.95rem] font-semibold text-white transition hover:border-primary-hover hover:bg-primary-hover"
-            >
-              Zobacz projekty
-            </a>
-            <a
-              href="#kontakt"
-              className="rounded-[10px] border-[1.5px] border-primary px-5.5 py-3 text-[0.95rem] font-semibold text-primary transition hover:bg-primary/10"
-            >
-              Skontaktuj się
-            </a>
+        <section
+          className="relative flex min-h-svh items-center bg-[url('/hero-bg-crop.svg')] bg-cover bg-left bg-no-repeat lg:bg-contain lg:bg-right"
+        >
+          <div className="mx-auto w-full max-w-5xl px-6 py-16 md:py-24">
+            <span className="mb-6 inline-block rounded-full bg-primary/10 px-3.5 py-1.5 text-sm font-semibold text-primary">
+              Dostępny do nowych projektów
+            </span>
+            <h1 className="mb-5 max-w-[16ch] text-[clamp(2.4rem,6vw,4.2rem)] leading-[1.08] font-extrabold tracking-tighter">
+              Tworzę <em className="not-italic text-primary">interfejsy</em>,
+              które działają i dobrze wyglądają.
+            </h1>
+            <p className="mb-9 max-w-[56ch] text-xl text-muted">
+              Software developer z pasją do czystego kodu, wydajnych aplikacji
+              webowych i przemyślanych interfejsów. Zamieniam pomysły w produkty
+              gotowe na produkcję.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              <a
+                href="#projekty"
+                className="rounded-[10px] border-[1.5px] border-primary bg-primary px-5.5 py-3 text-[0.95rem] font-semibold text-white transition hover:border-primary-hover hover:bg-primary-hover"
+              >
+                Zobacz projekty
+              </a>
+              <a
+                href="#kontakt"
+                className="rounded-[10px] border-[1.5px] border-primary px-5.5 py-3 text-[0.95rem] font-semibold text-primary transition hover:bg-primary/10"
+              >
+                Skontaktuj się
+              </a>
+            </div>
           </div>
-        </div>
+        </section>
 
         <section id="o-mnie" className="bg-surface py-14 md:py-20">
           <div className="mx-auto max-w-5xl px-6">
