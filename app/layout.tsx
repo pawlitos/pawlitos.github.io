@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { DM_Mono, Inter } from "next/font/google";
+import { DM_Mono, Noto_Sans } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
+const notoSans = Noto_Sans({
+  variable: "--font-noto-sans",
   subsets: ["latin", "latin-ext"],
 });
 
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="pl" className={`${inter.variable} ${dmMono.variable}`}>
+    <html lang="pl" className={`${notoSans.variable} ${dmMono.variable}`}>
       <body className="bg-white font-sans text-ink leading-relaxed antialiased pt-[env(safe-area-inset-top,0px)]">
         {children}
       </body>

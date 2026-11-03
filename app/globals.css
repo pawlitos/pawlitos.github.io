@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: var(--font-inter), system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-sans: var(--font-noto-sans), system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   --font-mono: var(--font-dm-mono), ui-monospace, monospace;
   --color-primary: var(--color-fuchsia-900);
   --color-primary-hover: color-mix(in srgb, var(--color-primary) 85%, black);
