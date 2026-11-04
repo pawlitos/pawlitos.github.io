@@ -8,8 +8,9 @@
   --color-background: color-mix(in srgb, var(--color-primary) 2%, white);
   --color-surface: var(--color-purple-50);
   --color-line: #e6e1ee;
-  --color-muted: #5f5a6b;
+  --color-muted: #514a5e;
   --color-ink: #18141f;
+  --shadow-header-floating: 0 -10px 28px color-mix(in srgb, var(--color-primary) 12%, transparent), 0 8px 24px color-mix(in srgb, var(--color-primary) 8%, transparent);
 }
 
 @media (prefers-reduced-motion: no-preference) {
