@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="pl" className={`${notoSans.variable} ${dmMono.variable}`}>
-      <body className="bg-white font-sans text-ink leading-relaxed antialiased pt-[env(safe-area-inset-top,0px)]">
+      <body className="bg-background text-ink leading-relaxed antialiased pt-[env(safe-area-inset-top,0px)]">
         {children}
       </body>
     </html>

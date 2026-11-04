@@ -5,6 +5,7 @@
   --font-mono: var(--font-dm-mono), ui-monospace, monospace;
   --color-primary: var(--color-fuchsia-900);
   --color-primary-hover: color-mix(in srgb, var(--color-primary) 85%, black);
+  --color-background: color-mix(in srgb, var(--color-primary) 2%, white);
   --color-surface: var(--color-purple-50);
   --color-line: #e6e1ee;
   --color-muted: #5f5a6b;
