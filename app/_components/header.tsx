@@ -1,7 +1,7 @@
 export default function Header() {
   return (
-    <header className="sticky top-[env(safe-area-inset-top,0px)] z-10 border-b border-line bg-white/70 backdrop-blur-lg backdrop-saturate-150">
-      <nav className="mx-auto flex h-16 max-w-5xl items-center justify-between px-6">
+    <header className="fixed inset-x-0 top-[calc(env(safe-area-inset-top,0px)+1rem)] z-10 mx-auto w-full max-w-5xl px-6">
+      <nav className="flex h-16 items-center justify-between rounded-2xl border border-white/70 bg-white/40 px-5 shadow-header-floating backdrop-blur-lg backdrop-saturate-150">
         <a href="#top" className="font-extrabold tracking-tight">
           pawlitos<span className="text-primary">.github.io</span>
         </a>
@@ -9,7 +9,7 @@ export default function Header() {
           <li>
             <a
               href="#o-mnie"
-              className="rounded-md px-3 py-1.5 transition-colors hover:bg-primary/10 hover:text-primary"
+              className="rounded-2xl px-3 py-1.5 transition-colors hover:bg-primary/10 hover:text-primary"
             >
               O mnie
             </a>
@@ -17,7 +17,7 @@ export default function Header() {
           <li>
             <a
               href="#projekty"
-              className="rounded-md px-3 py-1.5 transition-colors hover:bg-primary/10 hover:text-primary"
+              className="rounded-2xl px-3 py-1.5 transition-colors hover:bg-primary/10 hover:text-primary"
             >
               Projekty
             </a>
@@ -25,7 +25,7 @@ export default function Header() {
           <li>
             <a
               href="#kontakt"
-              className="rounded-md px-3 py-1.5 transition-colors hover:bg-primary/10 hover:text-primary"
+              className="rounded-2xl px-3 py-1.5 transition-colors hover:bg-primary/10 hover:text-primary"
             >
               Kontakt
             </a>
