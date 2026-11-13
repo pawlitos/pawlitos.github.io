@@ -6,9 +6,7 @@ export default function App() {
       <Header />
 
       <main id="top">
-        <section
-          className="relative flex min-h-svh items-center bg-[url('/hero-bg-crop.svg')] bg-cover bg-left bg-no-repeat lg:bg-contain lg:bg-right"
-        >
+        <section className="relative flex min-h-svh items-center bg-[url('/hero-bg-crop.svg')] bg-cover bg-left bg-no-repeat lg:bg-contain lg:bg-right">
           <div className="mx-auto w-full max-w-5xl px-6 py-16 md:py-24">
             <span className="mb-6 inline-block rounded-full bg-primary/10 px-3.5 py-1.5 text-sm font-semibold text-primary">
               Dostępny do nowych projektów
@@ -176,25 +174,27 @@ export default function App() {
               </article>
               <article className="flex flex-col rounded-2xl border border-line bg-white p-7 transition hover:-translate-y-1 hover:border-primary hover:shadow-xl hover:shadow-primary/15">
                 <h3 className="mb-2 text-xl font-semibold tracking-tight">
-                  Narzędzie CLI
+                  Kraken Reports
                 </h3>
                 <p className="mb-5 flex-1 text-muted">
-                  Aplikacja terminalowa automatyzująca codzienne zadania
-                  programistów, rozwijana jako open source.
+                  Narzędzie CLI, które zamienia transakcje z giełdy Kraken na
+                  roczne rozliczenie podatkowe w PLN po kursach NBP.
                 </p>
                 <div className="mb-4 flex flex-wrap gap-1.5 text-xs font-semibold text-primary">
                   <span className="rounded-md bg-primary/10 px-2.5 py-0.5">
-                    Rust
+                    Python
                   </span>
                   <span className="rounded-md bg-primary/10 px-2.5 py-0.5">
                     CLI
                   </span>
                   <span className="rounded-md bg-primary/10 px-2.5 py-0.5">
-                    Open source
+                    API NBP
                   </span>
                 </div>
                 <a
-                  href="#"
+                  href="https://github.com/pawlitos/kraken-reports"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="font-semibold text-primary hover:underline"
                 >
                   Zobacz projekt →
